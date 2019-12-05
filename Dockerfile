@@ -15,3 +15,5 @@ RUN dnf -y install glibc-static clang-devel llvm-devel openssl-devel
 # Update Packages
 # NOTE: Always keep this as the last step to ensure up-to-date packages.
 RUN dnf -y update
+
+CMD /bin/bash
