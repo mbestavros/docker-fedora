@@ -1,7 +1,7 @@
 FROM fedora
 
 # Install General Utilities
-RUN dnf -y install procps iproute findutils
+RUN dnf -y install procps iproute findutils man
 
 # Install General Development Tools
 RUN dnf -y install git vim gdb lldb valgrind strace
