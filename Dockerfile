@@ -4,7 +4,7 @@ FROM fedora
 RUN dnf -y install procps iproute findutils man
 
 # Install General Development Tools
-RUN dnf -y install git git-subtree vim gdb lldb valgrind strace diffstat
+RUN dnf -y install git git-subtree vim gdb lldb valgrind strace diffstat patch hub
 
 # Install C Development Environment
 RUN dnf -y install gcc clang make
