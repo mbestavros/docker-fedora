@@ -1,6 +1,7 @@
 FROM fedora
 
 # Enable the musl repo (for musl libc)
+RUN dnf -y install dnf-plugins-core
 RUN dnf -y copr enable taocris/musl
 RUN dnf -y install musl-devel musl-libc-static musl-gcc musl-clang
 
