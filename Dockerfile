@@ -5,7 +5,7 @@ RUN dnf -y copr enable taocris/musl
 RUN dnf -y install musl-devel musl-libc-static musl-gcc musl-clang
 
 # Install General Utilities
-RUN dnf -y install procps iproute findutils man
+RUN dnf -y install procps iproute findutils man file
 
 # Install General Development Tools
 RUN dnf -y install git git-subtree vim gdb lldb valgrind strace diffstat patch hub
