@@ -17,6 +17,9 @@ RUN dnf -y install gcc clang make
 # Install Build Dependencies
 RUN dnf -y install glibc-static clang-devel llvm-devel openssl-devel
 
+# Documentation
+RUN dnf -y mscgen graphviz
+
 # Update Packages
 # NOTE: Always keep this as the last step to ensure up-to-date packages.
 RUN dnf -y update
