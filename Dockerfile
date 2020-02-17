@@ -25,22 +25,13 @@ RUN dnf -y install glibc-static clang-devel llvm-devel openssl-devel
 # Documentation
 RUN dnf -y install mscgen graphviz
 
-# Install Rust via rustup.
+# Install Rust via rustup
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y -q
-
-# Install the musl compilation target.
 RUN rustup target add x86_64-unknown-linux-musl
-
-# Install other Rust-related tools.
-RUN rustup component add rustfmt
-
-RUN cargo install --force cargo-audit
+RUN rustup component add rustfmt rls
 
 # NOTE: Always keep these as the last steps to ensure up-to-date packages.
-# Update Packages
 RUN dnf -y update
-
-# Update rustup components
 RUN rustup update
 
 CMD /bin/bash
