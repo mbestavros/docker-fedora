@@ -23,7 +23,7 @@ RUN dnf -y install gcc clang make
 RUN dnf -y install glibc-static clang-devel llvm-devel openssl-devel
 
 # Documentation
-RUN dnf -y mscgen graphviz
+RUN dnf -y install mscgen graphviz
 
 # Install Rust via rustup.
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y -q
