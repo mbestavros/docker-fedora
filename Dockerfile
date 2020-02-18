@@ -28,7 +28,7 @@ RUN dnf -y install mscgen graphviz
 # Install Rust via rustup
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y -q
 RUN rustup target add x86_64-unknown-linux-musl
-RUN rustup component add rustfmt rls
+RUN rustup component add rustfmt rls clippy
 
 # NOTE: Always keep these as the last steps to ensure up-to-date packages.
 RUN dnf -y update
