@@ -31,7 +31,7 @@ RUN rustup target add x86_64-unknown-linux-musl
 RUN rustup component add rustfmt rls clippy
 
 # NOTE: Always keep these as the last steps to ensure up-to-date packages.
-RUN dnf -y update
 RUN rustup update
+RUN dnf -y update
 
 CMD /bin/bash
